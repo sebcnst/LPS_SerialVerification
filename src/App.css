@@ -4,9 +4,10 @@ html{
 
 body{
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: #12308A;
   letter-spacing: .25px;
+  overflow: hidden;
 }
 
 h1,h2,h3,p,form,input,textarea, button{
@@ -105,9 +106,15 @@ h1,h2,h3,p,form,input,textarea, button{
   line-height: 20px;
 }
 
+.copyright a{
+  color: white;
+  text-decoration: none;
+}
+
 .green{
   background-color: #119300;
 }
+
 
 form a{
   display: inline-block;
@@ -126,7 +133,21 @@ form a{
 
 @media screen and (max-width: 766px){
   .formCtn{
-    width: 80%;
+    width: 90%;
+  }
+
+  .errorCtn{
+    display: block;
+    text-align: center;
+  }
+
+  .errorCtn img{
+    width: 32px;
+    margin-bottom: 12px;
+  }
+
+  .form a{
+    padding: 7px 12px;
   }
 }
 
