@@ -60,12 +60,12 @@ export default class App extends Component{
           { 
             showGood && 
             <div className="errorCtn green">
-              <img src={Verified} className="errorIcon" alt="Error on serial number" />
-              <p>This serial number is a valid product on our platform.<br></br><br></br>Please contact us for more information.</p>
+              <img src={Verified} className="errorIcon" alt="Serial number" />
+              <p>This serial number is a valid product on our platform.<br></br><br></br><a href="mailto:info@lpsfr.com">Contact us</a> </p>
             </div>
           }
           
-          <input type="text" value={this.state.serial} onChange={(event) => this._onChangeInput(event)} className="inputSerial" placeholder="Enter the serial"/>
+          <input type="text" value={this.state.serial} onChange={(event) => this._onChangeInput(event)} className="inputSerial" placeholder="Enter the serial number"/>
           <input type="submit" value="Verify the product" className="inputSend" />
         </form>
 

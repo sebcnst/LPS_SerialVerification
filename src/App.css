@@ -109,6 +109,16 @@ h1,h2,h3,p,form,input,textarea, button{
   background-color: #119300;
 }
 
+form a{
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding:8px 16px;
+  background: white;
+  color: #119300;
+  border-radius: 24px;
+}
+
 
 @media screen and (max-width: 766px){
   .formCtn{
