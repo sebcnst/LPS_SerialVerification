@@ -119,6 +119,10 @@ form a{
   border-radius: 24px;
 }
 
+.red a {
+  color: #d40202 !important;
+}
+
 
 @media screen and (max-width: 766px){
   .formCtn{

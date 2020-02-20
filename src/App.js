@@ -27,7 +27,9 @@ export default class App extends Component{
     fetch('https://contact-platform.com/api/device/exists?device=' + serial)
     .then((response) => response.json())
     .then(data => {
-      if (data.code === 0){
+
+      // 1 =  ; 0 =  ; -1 =  ;
+      if (data.code === 0 || data.code === 1){
         this.setState({
           showError: false,
           showGood: true
@@ -51,9 +53,9 @@ export default class App extends Component{
 
           { 
             showError && 
-            <div className="errorCtn">
+            <div className="errorCtn red">
               <img src={iconError} className="errorIcon" alt="Error on serial number" />
-              <p>This serial number does not exist in our platform.<br></br><br></br>Please contact us for more information.</p>
+              <p>This serial number does not exist in our platform.<br></br><br></br><a href="mailto:info@lpsfr.com">Contact info@lpsfr.com</a></p>
             </div>
           }
 
@@ -61,7 +63,7 @@ export default class App extends Component{
             showGood && 
             <div className="errorCtn green">
               <img src={Verified} className="errorIcon" alt="Serial number" />
-              <p>This serial number is a valid product on our platform.<br></br><br></br>info@lpsfr.com<br></br><br></br><a href="mailto:info@lpsfr.com">Contact us</a> </p>
+              <p>This serial number is a valid product on our platform.<br></br><br></br><a href="mailto:info@lpsfr.com">Contact info@lpsfr.com</a></p>
             </div>
           }
           
