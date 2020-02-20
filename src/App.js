@@ -65,8 +65,8 @@ export default class App extends Component{
             </div>
           }
           
-          <input type="text" value={this.state.serial} onChange={(event) => this._onChangeInput(event)} className="inputSerial" placeholder="Entrer votre numéro"/>
-          <input type="submit" value="Tester" className="inputSend" />
+          <input type="text" value={this.state.serial} onChange={(event) => this._onChangeInput(event)} className="inputSerial" placeholder="Enter the serial"/>
+          <input type="submit" value="Verify the product" className="inputSend" />
         </form>
 
         <p className="copyright">2020 © Lightning Protection Systems France<br></br>www.lpsfr.com</p>
